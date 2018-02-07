@@ -8,8 +8,8 @@ module Libcouchbase
     require 'libcouchbase/callbacks'
     require 'libcouchbase/connection'
 
-    DefaultOpts = Struct.new(:host, :bucket, :username, :password)
-    Defaults = DefaultOpts.new('127.0.0.1', 'default')
+    DefaultOpts = Struct.new(:host, :bucket, :scheme, :username, :password)
+    Defaults = DefaultOpts.new('127.0.0.1', 'default', 'couchbase')
 
     class Results
         include Enumerable
